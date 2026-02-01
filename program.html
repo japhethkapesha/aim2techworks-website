@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIM² TechWorks 9-Week Training Program - Advanced Intelligent Manufacturing & Mechatronics">
+    <title>Program | AIM² TechWorks Training Centre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght:700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .program-overview {
+            background: var(--gray-100);
+            padding: var(--spacing-lg) 0;
+        }
+        
+        .program-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .program-intro h2 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .program-highlight {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy));
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+        
+        .program-phases {
+            display: grid;
+            gap: 3rem;
+        }
+        
+        .phase-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phase-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-orange), var(--accent-cyan));
+        }
+        
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .phase-number {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--primary-orange);
+            opacity: 0.3;
+            line-height: 1;
+        }
+        
+        .phase-title h3 {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .phase-duration {
+            color: var(--gray-700);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .module-card {
+            background: var(--gray-100);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 3px solid var(--primary-orange);
+        }
+        
+        .module-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .module-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .module-card li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: var(--gray-700);
+        }
+        
+        .module-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+        
+        .practical-activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .activity-card {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .activity-card h4 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .activity-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .activity-card li {
+            padding: 0.3rem 0;
+            color: var(--gray-200);
+        }
+        
+        .project-examples {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-top: 2rem;
+        }
+        
+        .project-examples h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .projects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .project-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-cyan);
+        }
+        
+        .project-item strong {
+            color: var(--primary-blue);
+        }
+        
+        .certification-section {
+            background: white;
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        
+        .cert-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--primary-orange), #FF8C5A);
+            padding: 3rem;
+            border-radius: 20px;
+            color: white;
+        }
+        
+        .cert-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cert-details {
+            text-align: left;
+            margin-top: 2rem;
+        }
+        
+        .cert-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .cert-details li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .cert-details li::before {
+            content: '✓';
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-placeholder">
+                    <div class="logo-icon">AIM²</div>
+                </div>
+                <div class="logo-text">
+                    <h1>AIM² TechWorks</h1>
+                    <p class="tagline">Where Automation, Motion & Intelligence Meet</p>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html" class="active">Program</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Program Overview -->
+    <section class="program-overview">
+        <div class="container">
+            <div class="program-intro">
+                <h2>9-Week Training Program</h2>
+                <div class="section-divider"></div>
+                <p class="lead-text">Advanced Industrial & Automotive Skills Program designed to transform theoretical knowledge into practical, industry-ready expertise.</p>
+                
+                <div class="program-highlight">
+                    <h3>Program Structure</h3>
+                    <p><strong>Duration:</strong> 9 Weeks (Full-Time / Modular)</p>
+                    <p><strong>Delivery:</strong> Lectures, Tutorials, Hands-on Workshops & Industry-Oriented Projects</p>
+                    <p><strong>Outcome:</strong> Job-ready skills for manufacturing industries, automotive workshops, automation firms, industrial maintenance, and research environments</p>
+                </div>
+            </div>
+
+            <!-- Phase 1: Lectures & Tutorials -->
+            <div class="program-phases">
+                <div class="phase-section">
+                    <div class="phase-header">
+                        <div class="phase-number">01</div>
+                        <div class="phase-title">
+                            <h3>Phase 1: Lectures & Tutorials</h3>
+                            <p class="phase-duration">Weeks 1–3: Theory Foundation</p>
+                        </div>
+                    </div>
+                    
+                    <p>Building strong theoretical foundations across all core areas of intelligent manufacturing and mechatronics.</p>
+                    
+                    <div class="modules-grid">
+                        <div class="module-card">
+                            <h4>Foundations of Industrial Technology</h4>
+                            <ul>
+                                <li>Workshop safety standards</li>
+                                <li>Industrial tools and equipment</li>
+                                <li>Quality standards and practices</li>
+                                <li>Industry 4.0 principles</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="module-card">
+                            <h4>Computer Vision for Control</h4>
+                            <ul>
+                                <li>Camera systems and calibration</li>
+                                <li>Image processing fundamentals</li>
+                                <li>Object detection algorithms</li>
+                                <li>CV-based feedback control</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="module-card">
+                            <h4>Ontology & Mereotopology</h4>
+                            <ul>
+                                <li>Task representation methods</li>
+                                <li>Spatial reasoning concepts</li>
+                                <li>Motion planning for manufacturing</li>
+                                <li>Intelligent task automation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="module-card">
+                            <h4>Electrical Machines</h4>
+                            <ul>
+                                <li>Motor and generator principles</li>
+                                <li>Machine diagnostics</li>
+                                <li>Performance analysis</li>
+                                <li>Maintenance protocols</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="module-card">
+                            <h4>Industrial Automation</h4>
+                            <ul>
+                                <li>PLC programming basics</li>
+                                <li>HMI interface design</li>
+                                <li>Sensors and actuators</li>
+                                <li>Control system integration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="module-card">
+                            <h4>Automotive Systems</h4>
+                            <ul>
+                                <li>Engine fundamentals</li>
+                                <li>Automotive control systems</li>
+                                <li>Electrical wiring diagrams</li>
+                                <li>Diagnostics and troubleshooting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Practical & Workshops -->
+                <div class="phase-section">
+                    <div class="phase-header">
+                        <div class="phase-number">02</div>
+                        <div class="phase-title">
+                            <h3>Phase 2: Practical & Workshops</h3>
+                            <p class="phase-duration">Weeks 4–6: Hands-On Skills Development</p>
+                        </div>
+                    </div>
+                    
+                    <p>Intensive practical training in fully equipped workshops and laboratories, applying theoretical knowledge to real-world scenarios.</p>
+                    
+                    <div class="practical-activities">
+                        <div class="activity-card">
+                            <h4>Motor & Generator Rewinding</h4>
+                            <ul>
+                                <li>Machine dismantling procedures</li>
+                                <li>Coil winding techniques</li>
+                                <li>Insulation methods</li>
+                                <li>Testing and commissioning</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <h4>PLC & HMI Labs</h4>
+                            <ul>
+                                <li>Ladder logic programming</li>
+                                <li>I/O wiring and configuration</li>
+                                <li>Sensor integration</li>
+                                <li>Process automation projects</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <h4>Power Drives & Control</h4>
+                            <ul>
+                                <li>VFD installation and setup</li>
+                                <li>Soft starter configuration</li>
+                                <li>Power electronics circuits</li>
+                                <li>Motor control applications</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <h4>Computer Vision Labs</h4>
+                            <ul>
+                                <li>Camera calibration techniques</li>
+                                <li>Real-time control demonstrations</li>
+                                <li>Vision-guided systems</li>
+                                <li>Quality inspection applications</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <h4>Automotive Workshops</h4>
+                            <ul>
+                                <li>Engine servicing and repairs</li>
+                                <li>Electrical system wiring</li>
+                                <li>Diagnostic equipment use</li>
+                                <li>Fault finding procedures</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <h4>Fabrication & Welding</h4>
+                            <ul>
+                                <li>Arc welding techniques</li>
+                                <li>MIG welding basics</li>
+                                <li>Safety procedures</li>
+                                <li>Quality control standards</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <h4>Body Works</h4>
+                            <ul>
+                                <li>Panel beating methods</li>
+                                <li>Alignment techniques</li>
+                                <li>Finishing procedures</li>
+                                <li>Paint preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Learner Projects -->
+                <div class="phase-section">
+                    <div class="phase-header">
+                        <div class="phase-number">03</div>
+                        <div class="phase-title">
+                            <h3>Phase 3: Learner Projects</h3>
+                            <p class="phase-duration">Weeks 7–9: Applied Project Work</p>
+                        </div>
+                    </div>
+                    
+                    <p>Work individually or in teams on industry-relevant projects that demonstrate mastery of learned skills and prepare for real-world challenges.</p>
+                    
+                    <div class="project-examples">
+                        <h4>Example Project Options</h4>
+                        <div class="projects-list">
+                            <div class="project-item">
+                                <strong>Vision-Guided System:</strong> Design and implement a computer vision-guided conveyor or robotic task for quality control or sorting
+                            </div>
+                            
+                            <div class="project-item">
+                                <strong>PLC-Controlled Process:</strong> Develop an automated industrial process using PLC programming, sensors, and actuators
+                            </div>
+                            
+                            <div class="project-item">
+                                <strong>Motor Rewinding Project:</strong> Complete motor rewinding with efficiency analysis and performance improvement documentation
+                            </div>
+                            
+                            <div class="project-item">
+                                <strong>Automotive Electrical System:</strong> Design and wire a complete automotive electrical system with diagnostics capability
+                            </div>
+                            
+                            <div class="project-item">
+                                <strong>Fabrication Project:</strong> Welding and fabrication of industrial components meeting industry standards
+                            </div>
+                            
+                            <div class="project-item">
+                                <strong>Task Planning Demo:</strong> Ontology-based task planning demonstration for manufacturing automation
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-highlight" style="margin-top: 2rem;">
+                        <h4>📌 Final Week Activities</h4>
+                        <p><strong>Project Presentation:</strong> Each learner/team presents their completed project to instructors and industry guests</p>
+                        <p><strong>Evaluation:</strong> Comprehensive assessment based on technical execution, innovation, and practical application</p>
+                        <p><strong>Showcase:</strong> Best projects featured in training center exhibition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="certification-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Certification & Assessment</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="cert-box">
+                <h3>Certificate in Industrial Automation, Automotive & Intelligent Manufacturing</h3>
+                <p>Issued by: AIM² TechWorks Training Centre – Ndhiwa, Nyeri</p>
+                
+                <div class="cert-details">
+                    <h4>Assessment Breakdown:</h4>
+                    <ul>
+                        <li>Continuous practical assessment – 40%</li>
+                        <li>Final project – 40%</li>
+                        <li>Attendance & professionalism – 20%</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 2rem;">Outstanding Learners Receive:</h4>
+                    <ul>
+                        <li>Personalized recommendation letters</li>
+                        <li>Project showcase support</li>
+                        <li>Internship linkage assistance (where available)</li>
+                        <li>Recognition at graduation ceremony</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join This Program?</h2>
+                <p>Start your journey toward industry excellence today</p>
+                <div class="cta-buttons">
+                    <a href="registration.html" class="btn btn-primary btn-large">Register Now</a>
+                    <a href="schedule.html" class="btn btn-secondary btn-large">View Schedule</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AIM² TechWorks</h3>
+                    <p>Advanced Intelligent Manufacturing & Mechatronics Training Centre</p>
+                    <p class="footer-tagline">Training the Hands and Minds of Intelligent Industry</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 Ndhiwa – Nyeri, Kenya</p>
+                    <p>📧 <a href="mailto:info@aim2techworks.edu">info@aim2techworks.edu</a></p>
+                    <p>📱 +254 XXX XXX XXX</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Training Intakes</h4>
+                    <p><strong>Intake 1:</strong> February – April</p>
+                    <p><strong>Intake 2:</strong> July – September</p>
+                    <p class="highlight">Registration: Ksh. 1,000</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIM² TechWorks Training Centre. All rights reserved.</p>
+                <p>Ndhiwa – Nyeri, Kenya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule | AIM² TechWorks Training Centre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .schedule-container { background: var(--gray-100); padding: var(--spacing-lg) 0; }
+        .schedule-table { background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); margin: 2rem 0; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy)); color: white; padding: 1.5rem 1rem; text-align: left; font-family: var(--font-display); }
+        td { padding: 1.25rem 1rem; border-bottom: 1px solid var(--gray-200); }
+        tr:hover { background: var(--gray-100); }
+        .time-col { color: var(--primary-orange); font-weight: 700; width: 25%; }
+        .activity-col { color: var(--gray-900); }
+        .break-row { background: #FFF3E0; }
+        .break-row td { color: var(--primary-orange); font-weight: 600; }
+        .schedule-note { background: var(--primary-orange); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-placeholder"><div class="logo-icon">AIM²</div></div>
+                <div class="logo-text">
+                    <h1>AIM² TechWorks</h1>
+                    <p class="tagline">Where Automation, Motion & Intelligence Meet</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="schedule.html" class="active">Schedule</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="schedule-container">
+        <div class="container">
+            <div class="section-header">
+                <h2>Weekly Training Schedule</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Monday to Friday - Full-Time Training</p>
+            </div>
+
+            <div class="schedule-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">8:30 AM – 10:00 AM</td>
+                            <td class="activity-col"><strong>Theory Lectures / Tutorials</strong><br>Foundational concepts, technical principles, and guided learning</td>
+                        </tr>
+                        <tr class="break-row">
+                            <td class="time-col">10:00 AM – 10:30 AM</td>
+                            <td class="activity-col">☕ Morning Break</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:30 AM – 1:00 PM</td>
+                            <td class="activity-col"><strong>Practical Sessions / Lab Work</strong><br>Hands-on training in workshops and laboratories</td>
+                        </tr>
+                        <tr class="break-row">
+                            <td class="time-col">1:00 PM – 2:00 PM</td>
+                            <td class="activity-col">🍽️ Lunch Break</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">2:00 PM – 4:30 PM</td>
+                            <td class="activity-col"><strong>Workshops / Project Work</strong><br>Advanced practical training, team projects, and skill development</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="schedule-note">
+                <h3>📅 Saturday Sessions (Optional)</h3>
+                <p><strong>Time:</strong> 9:00 AM – 1:00 PM</p>
+                <p><strong>Activities:</strong></p>
+                <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                    <li>Remedial sessions for learners needing additional support</li>
+                    <li>Extra practical workshops</li>
+                    <li>Industry guest lectures and talks</li>
+                    <li>Project consultation and mentorship</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Sunday:</strong> Rest Day</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Structured Learning, Real Results</h2>
+                <p>A carefully designed schedule for maximum skill acquisition</p>
+                <div class="cta-buttons">
+                    <a href="registration.html" class="btn btn-primary btn-large">Enroll Now</a>
+                    <a href="program.html" class="btn btn-secondary btn-large">View Full Program</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AIM² TechWorks</h3>
+                    <p>Advanced Intelligent Manufacturing & Mechatronics Training Centre</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 Ndhiwa – Nyeri, Kenya</p>
+                    <p>📧 <a href="mailto:info@aim2techworks.edu">info@aim2techworks.edu</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Training Intakes</h4>
+                    <p><strong>Intake 1:</strong> February – April</p>
+                    <p><strong>Intake 2:</strong> July – September</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIM² TechWorks Training Centre. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

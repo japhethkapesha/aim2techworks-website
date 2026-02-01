@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AIM² TechWorks Training Centre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-section { background: var(--gray-100); padding: var(--spacing-lg) 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin: 3rem 0; }
+        .contact-info { background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy)); padding: 3rem; border-radius: 20px; color: white; }
+        .contact-info h3 { color: white; margin-bottom: 2rem; }
+        .info-item { margin: 2rem 0; }
+        .info-item .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .info-item h4 { color: var(--primary-orange); margin-bottom: 0.5rem; }
+        .info-item p { color: var(--gray-200); }
+        .contact-form { background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--shadow-md); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--primary-blue); font-weight: 600; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-family: var(--font-body); font-size: 1rem; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary-orange); }
+        .form-group textarea { min-height: 150px; resize: vertical; }
+        .map-section { background: white; padding: var(--spacing-lg) 0; }
+        .map-placeholder { width: 100%; height: 400px; background: var(--gray-100); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--gray-700); font-size: 1.2rem; }
+        @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-placeholder"><div class="logo-icon">AIM²</div></div>
+                <div class="logo-text">
+                    <h1>AIM² TechWorks</h1>
+                    <p class="tagline">Where Automation, Motion & Intelligence Meet</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Have questions? We're here to help!</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="info-item">
+                        <div class="icon">📍</div>
+                        <h4>Location</h4>
+                        <p>Ndhiwa – Nyeri, Kenya</p>
+                        <p>Training Centre Address:<br>[Full Street Address Here]</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">📧</div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@aim2techworks.edu" style="color: var(--accent-cyan);">info@aim2techworks.edu</a></p>
+                        <p><a href="mailto:admissions@aim2techworks.edu" style="color: var(--accent-cyan);">admissions@aim2techworks.edu</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">📱</div>
+                        <h4>Phone</h4>
+                        <p>Main: +254 XXX XXX XXX</p>
+                        <p>Admissions: +254 XXX XXX XXX</p>
+                        <p>WhatsApp: +254 XXX XXX XXX</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">🕐</div>
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 9:00 AM - 1:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Send Us a Message</h3>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Select Subject --</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="registration">Registration Process</option>
+                                <option value="program">Program Details</option>
+                                <option value="fees">Fees & Payment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="map-placeholder">
+                📍 Map Location: Ndhiwa – Nyeri, Kenya<br>
+                <span style="font-size: 0.9rem;">(Google Maps integration can be added here)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Training?</h2>
+                <p>Don't wait - Register now and transform your future</p>
+                <div class="cta-buttons">
+                    <a href="registration.html" class="btn btn-primary btn-large">Register Now</a>
+                    <a href="program.html" class="btn btn-secondary btn-large">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AIM² TechWorks</h3>
+                    <p>Advanced Intelligent Manufacturing & Mechatronics Training Centre</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 Ndhiwa – Nyeri, Kenya</p>
+                    <p>📧 <a href="mailto:info@aim2techworks.edu">info@aim2techworks.edu</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Training Intakes</h4>
+                    <p><strong>Intake 1:</strong> February – April</p>
+                    <p><strong>Intake 2:</strong> July – September</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIM² TechWorks Training Centre. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

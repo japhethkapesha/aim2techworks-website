@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | AIM² TechWorks Training Centre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .registration-section { background: var(--gray-100); padding: var(--spacing-lg) 0; }
+        .reg-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin: 3rem 0; }
+        .reg-card { background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--shadow-md); text-align: center; }
+        .reg-icon { font-size: 4rem; margin-bottom: 1.5rem; }
+        .reg-card h3 { color: var(--primary-blue); margin-bottom: 1rem; }
+        .reg-card p { margin-bottom: 2rem; }
+        .fee-box { background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy)); color: white; padding: 3rem; border-radius: 20px; text-align: center; margin: 3rem 0; }
+        .fee-amount { font-family: var(--font-display); font-size: 4rem; color: var(--primary-orange); margin: 1rem 0; }
+        .important-note { background: #FFF3E0; border-left: 5px solid var(--primary-orange); padding: 2rem; border-radius: 8px; margin: 2rem 0; }
+        .important-note strong { color: var(--primary-orange); }
+        .payment-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .payment-card { background: var(--gray-100); padding: 1.5rem; border-radius: 12px; }
+        .payment-card h4 { color: var(--primary-blue); margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-placeholder"><div class="logo-icon">AIM²</div></div>
+                <div class="logo-text">
+                    <h1>AIM² TechWorks</h1>
+                    <p class="tagline">Where Automation, Motion & Intelligence Meet</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="registration.html" class="active">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="registration-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Register for Training</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Registration is open year-round - Secure your spot today!</p>
+            </div>
+
+            <div class="fee-box">
+                <h3>Registration Fee</h3>
+                <div class="fee-amount">Ksh. 1,000</div>
+                <p style="font-size: 1.1rem;">Non-refundable registration fee</p>
+                <p>This fee covers application processing and confirms your spot in the selected intake</p>
+            </div>
+
+            <div class="section-header">
+                <h2>How to Register</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="reg-options">
+                <div class="reg-card">
+                    <div class="reg-icon">📧</div>
+                    <h3>Email Registration</h3>
+                    <p>Send your registration details and scanned documents via email</p>
+                    <a href="mailto:info@aim2techworks.edu?subject=Training Registration" class="btn btn-primary">Email Now</a>
+                    <div style="margin-top: 1.5rem; text-align: left; font-size: 0.9rem; color: var(--gray-700);">
+                        <p><strong>Include:</strong></p>
+                        <ul style="padding-left: 1.5rem;">
+                            <li>Full Name</li>
+                            <li>Phone Number</li>
+                            <li>Email Address</li>
+                            <li>Preferred Intake</li>
+                            <li>KCSE Certificate (scanned)</li>
+                            <li>National ID/Birth Certificate</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reg-card">
+                    <div class="reg-icon">📝</div>
+                    <h3>Online Form</h3>
+                    <p>Fill out our comprehensive registration form online (Coming Soon)</p>
+                    <a href="#" class="btn btn-secondary" onclick="alert('Online form coming soon! Please use email registration for now.'); return false;">Register Online</a>
+                    <div style="margin-top: 1.5rem; text-align: left; font-size: 0.9rem; color: var(--gray-700);">
+                        <p><strong>Benefits:</strong></p>
+                        <ul style="padding-left: 1.5rem;">
+                            <li>Quick submission</li>
+                            <li>Instant confirmation</li>
+                            <li>Document upload</li>
+                            <li>Track application status</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important-note">
+                <h3>⚠️ Important Registration Information</h3>
+                <ul style="padding-left: 2rem; margin-top: 1rem;">
+                    <li><strong>Registration is open year-round</strong>, but admission is confirmed per intake</li>
+                    <li><strong>Registration fee (Ksh. 1,000) is non-refundable</strong> and must be paid to confirm your application</li>
+                    <li><strong>Early registration is encouraged</strong> as spaces are limited per intake</li>
+                    <li><strong>All documents must be genuine</strong> - false documents will result in immediate disqualification</li>
+                    <li><strong>You will receive confirmation</strong> within 3-5 working days after registration</li>
+                </ul>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2>Payment Methods</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="payment-methods">
+                <div class="payment-card">
+                    <h4>📱 M-PESA</h4>
+                    <p><strong>Paybill Number:</strong> XXXXX</p>
+                    <p><strong>Account Number:</strong> Your Name</p>
+                    <p>Send Ksh. 1,000 and save the confirmation SMS</p>
+                </div>
+
+                <div class="payment-card">
+                    <h4>🏦 Bank Transfer</h4>
+                    <p><strong>Bank:</strong> [Bank Name]</p>
+                    <p><strong>Account:</strong> [Account Number]</p>
+                    <p><strong>Account Name:</strong> AIM² TechWorks</p>
+                    <p>Send proof of payment via email</p>
+                </div>
+
+                <div class="payment-card">
+                    <h4>💳 Direct Payment</h4>
+                    <p>Visit our offices in Ndhiwa-Nyeri</p>
+                    <p>Pay by cash, M-PESA, or card</p>
+                    <p>Receive instant receipt</p>
+                </div>
+            </div>
+
+            <div class="fee-box">
+                <h3>📅 Next Steps After Registration</h3>
+                <div style="text-align: left; margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <ol style="padding-left: 2rem; line-height: 2;">
+                        <li>Pay the Ksh. 1,000 registration fee</li>
+                        <li>Send payment confirmation to our email</li>
+                        <li>Receive admission letter within 3-5 days</li>
+                        <li>Pay training fee according to the schedule in your admission letter</li>
+                        <li>Attend mandatory orientation before training starts</li>
+                        <li>Begin your 9-week journey to industry excellence!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Questions About Registration?</h2>
+                <p>Our team is here to help you every step of the way</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Contact Us</a>
+                    <a href="admission.html" class="btn btn-secondary btn-large">View Requirements</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AIM² TechWorks</h3>
+                    <p>Advanced Intelligent Manufacturing & Mechatronics Training Centre</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 Ndhiwa – Nyeri, Kenya</p>
+                    <p>📧 <a href="mailto:info@aim2techworks.edu">info@aim2techworks.edu</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Training Intakes</h4>
+                    <p><strong>Intake 1:</strong> February – April</p>
+                    <p><strong>Intake 2:</strong> July – September</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIM² TechWorks Training Centre. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

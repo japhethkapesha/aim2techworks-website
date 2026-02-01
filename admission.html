@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Requirements | AIM² TechWorks Training Centre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .admission-section { background: var(--gray-100); padding: var(--spacing-lg) 0; }
+        .requirements-box { background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--shadow-md); margin: 2rem 0; }
+        .requirements-box h3 { color: var(--primary-blue); margin-bottom: 1.5rem; }
+        .req-list { list-style: none; padding: 0; }
+        .req-list li { padding: 1rem; margin: 0.5rem 0; background: var(--gray-100); border-left: 4px solid var(--primary-orange); border-radius: 8px; }
+        .req-list li strong { color: var(--primary-blue); }
+        .eligibility-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .eligibility-card { background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy)); padding: 2rem; border-radius: 16px; color: white; }
+        .eligibility-card h4 { color: var(--primary-orange); margin-bottom: 1rem; }
+        .process-steps { counter-reset: step; }
+        .process-step { position: relative; padding-left: 4rem; margin: 2rem 0; }
+        .process-step::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; width: 50px; height: 50px; background: var(--primary-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-family: var(--font-display); font-size: 1.5rem; }
+        .process-step h4 { color: var(--primary-blue); margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-placeholder"><div class="logo-icon">AIM²</div></div>
+                <div class="logo-text">
+                    <h1>AIM² TechWorks</h1>
+                    <p class="tagline">Where Automation, Motion & Intelligence Meet</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="admission.html" class="active">Admission</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="admission-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Admission Requirements</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Join the next generation of skilled industrial technicians</p>
+            </div>
+
+            <div class="requirements-box">
+                <h3>📋 Minimum Requirements</h3>
+                <ul class="req-list">
+                    <li><strong>Academic Qualification:</strong> KCSE Form 4 Certificate (Minimum requirement)</li>
+                    <li><strong>Interest:</strong> Demonstrated interest in engineering, automotive, automation, or applied technology</li>
+                    <li><strong>Prior Experience:</strong> NOT required - We use a progressive training approach suitable for beginners</li>
+                    <li><strong>Age:</strong> No age restriction - Open to school leavers, students, and working professionals</li>
+                </ul>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2>Who Can Apply?</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="eligibility-grid">
+                <div class="eligibility-card">
+                    <h4>✓ Form 4 Leavers</h4>
+                    <p>Recent KCSE graduates looking to gain practical industrial skills before college or employment</p>
+                </div>
+                <div class="eligibility-card">
+                    <h4>✓ TVET Students</h4>
+                    <p>Technical and vocational students seeking hands-on experience to complement their studies</p>
+                </div>
+                <div class="eligibility-card">
+                    <h4>✓ College Students</h4>
+                    <p>Diploma and certificate students wanting practical industry exposure during holidays</p>
+                </div>
+                <div class="eligibility-card">
+                    <h4>✓ University Students</h4>
+                    <p>Engineering and ICT students seeking practical skills and industrial experience</p>
+                </div>
+                <div class="eligibility-card">
+                    <h4>✓ Industrial Interns</h4>
+                    <p>Professionals on industrial attachment looking for structured training</p>
+                </div>
+                <div class="eligibility-card">
+                    <h4>✓ Working Technicians</h4>
+                    <p>Employed technicians seeking to upgrade skills and advance their careers</p>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2>Admission Process</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="requirements-box">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <h4>Submit Registration</h4>
+                        <p>Complete online registration form or email your application with required documents</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>Pay Registration Fee</h4>
+                        <p>Non-refundable registration fee of Ksh. 1,000 to confirm your application</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>Document Verification</h4>
+                        <p>Submit copies of KCSE certificate and national ID or birth certificate</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>Admission Confirmation</h4>
+                        <p>Receive admission letter via email or SMS within 3-5 working days</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>Fee Payment</h4>
+                        <p>Pay training fee as per intake schedule (details provided in admission letter)</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>Orientation</h4>
+                        <p>Attend orientation session before training begins (mandatory for all learners)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="requirements-box" style="background: linear-gradient(135deg, var(--primary-orange), #FF8C5A); color: white;">
+                <h3 style="color: white;">📅 Important Dates</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h4 style="color: white;">Intake 1: February - April 2026</h4>
+                        <p><strong>Registration Opens:</strong> Now Open</p>
+                        <p><strong>Registration Deadline:</strong> January 31, 2026</p>
+                        <p><strong>Training Starts:</strong> February 3, 2026</p>
+                    </div>
+                    <div>
+                        <h4 style="color: white;">Intake 2: July - September 2026</h4>
+                        <p><strong>Registration Opens:</strong> May 1, 2026</p>
+                        <p><strong>Registration Deadline:</strong> June 30, 2026</p>
+                        <p><strong>Training Starts:</strong> July 1, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Meet the Requirements?</h2>
+                <p>Take the next step in your technical career</p>
+                <div class="cta-buttons">
+                    <a href="registration.html" class="btn btn-primary btn-large">Apply Now</a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Ask Questions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AIM² TechWorks</h3>
+                    <p>Advanced Intelligent Manufacturing & Mechatronics Training Centre</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 Ndhiwa – Nyeri, Kenya</p>
+                    <p>📧 <a href="mailto:info@aim2techworks.edu">info@aim2techworks.edu</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Training Intakes</h4>
+                    <p><strong>Intake 1:</strong> February – April</p>
+                    <p><strong>Intake 2:</strong> July – September</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIM² TechWorks Training Centre. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -24,30 +24,750 @@
         .map-section { background: white; padding: var(--spacing-lg) 0; }
         .map-placeholder { width: 100%; height: 400px; background: var(--gray-100); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--gray-700); font-size: 1.2rem; }
         @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; } }
+    /* ==================== COMPLETE CSS STYLES ==================== */
+        
+        /* CSS Variables */
+        :root {
+            --primary-blue: #0062CC;
+            --dark-navy: #0A192F;
+            --primary-orange: #FF5E00;
+            --accent-cyan: #00D9FF;
+            --gray-100: #F5F7FA;
+            --gray-200: #E4E7EB;
+            --gray-300: #CBD2D9;
+            --gray-700: #495057;
+            --gray-900: #212529;
+            --font-display: 'Orbitron', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --spacing-sm: 2rem;
+            --spacing-md: 4rem;
+            --spacing-lg: 6rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--gray-900);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ==================== HEADER ==================== */
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-placeholder {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 98, 204, 0.3);
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
+        }
+
+        .logo-text h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            font-weight: 900;
+        }
+
+        .tagline {
+            font-size: 0.75rem;
+            color: var(--gray-700);
+            font-weight: 500;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: var(--primary-orange);
+            background: rgba(255, 94, 0, 0.1);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-blue);
+            border-radius: 3px;
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 98, 204, 0.95) 0%, rgba(10, 25, 47, 0.9) 50%, rgba(255, 94, 0, 0.85) 100%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            padding: 3rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary-orange);
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* ==================== BUTTONS ==================== */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff4500;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 94, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-100);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-large {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* ==================== SECTIONS ==================== */
+        .about-section,
+        .target-section,
+        .intakes-section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
+            margin: 0 auto 1rem;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-700);
+        }
+
+        /* ==================== ABOUT SECTION ==================== */
+        .about-content {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .about-text {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* ==================== TRAINING AREAS (IMPROVED) ==================== */
+        .training-areas {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 5rem 0;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .area-card {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, #0062CC, #FF5E00);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .area-card:hover::before {
+            opacity: 1;
+        }
+
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 98, 204, 0.15);
+        }
+
+        .area-number {
+            position: absolute;
+            top: -15px;
+            right: 25px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #0062CC 0%, #0052a8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 98, 204, 0.4);
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+
+        .area-number::before {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .area-number::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border: 2px solid #FF5E00;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .area-card:hover .area-number {
+            transform: rotate(360deg) scale(1.1);
+            background: linear-gradient(135deg, #FF5E00 0%, #ff4500 100%);
+            box-shadow: 0 12px 30px rgba(255, 94, 0, 0.5);
+        }
+
+        .area-card:hover .area-number::after {
+            opacity: 1;
+            inset: -8px;
+        }
+
+        .area-card h3 {
+            color: #0A192F;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .area-card:hover h3 {
+            color: #0062CC;
+        }
+
+        .area-card p {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .area-card {
+            animation: slideInUp 0.6s ease-out backwards;
+        }
+
+        .area-card:nth-child(1) { animation-delay: 0.1s; }
+        .area-card:nth-child(2) { animation-delay: 0.2s; }
+        .area-card:nth-child(3) { animation-delay: 0.3s; }
+        .area-card:nth-child(4) { animation-delay: 0.4s; }
+        .area-card:nth-child(5) { animation-delay: 0.5s; }
+        .area-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* ==================== TARGET SECTION ==================== */
+        .target-section {
+            background: white;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .target-card {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy));
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+
+        .target-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .target-card h3 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* ==================== INTAKES SECTION ==================== */
+        .intakes-section {
+            background: var(--gray-100);
+        }
+
+        .intakes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .intake-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-orange);
+        }
+
+        .intake-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .intake-badge {
+            display: inline-block;
+            background: var(--primary-orange);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .intake-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .intake-duration {
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .intake-dates {
+            color: var(--primary-orange);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        /* ==================== CTA SECTION ==================== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy));
+            color: white;
+            padding: var(--spacing-md) 0;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .main-footer {
+            background: var(--dark-navy);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3,
+        .footer-section h4 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--gray-200);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-orange);
+        }
+
+        .footer-tagline {
+            font-style: italic;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--gray-300);
+        }
+
+        .highlight {
+            color: var(--primary-orange);
+            font-weight: 700;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 992px) {
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .intakes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .areas-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .area-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                top: -10px;
+                right: 20px;
+            }
+            
+            .area-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .area-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="main-header">
         <div class="header-container">
             <div class="logo-section">
-                <div class="logo-placeholder"><div class="logo-icon"></div></div>
+                <div class="logo-placeholder">
+                <img src="images/logo.png" alt="AIM² TechWorks Logo">
+                </div>
                 <div class="logo-text">
                     <h1>AIM² TechWorks</h1>
                     <p class="tagline">Where Automation, Motion & Intelligence Meet</p>
                 </div>
             </div>
+            
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="program.html">Program</a></li>
                     <li><a href="schedule.html">Schedule</a></li>
                     <li><a href="admission.html">Admission</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </header>
@@ -162,13 +882,16 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>AIM² TechWorks</h3>
                     <p>Advanced Intelligent Manufacturing & Mechatronics Training Centre</p>
+                    <p class="footer-tagline">Training the Hands and Minds of Intelligent Industry</p>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -180,23 +903,27 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>📍 Ndhiwa and Nyeri, Kenya</p>
                     <p>📧 <a href="mailto:aim2techworks@hotmail.com">aim2techworks@hotmail.com</a></p>
-                    <p>📱 +254 768 620 804</p>
+                    <p>📱 <a href="tel:+254768620804">+254 768 620 804</a></p>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Training Intakes</h4>
                     <p><strong>Intake 1:</strong> February – April</p>
                     <p><strong>Intake 2:</strong> July – September</p>
+                    <p class="highlight">Registration: Ksh. 1,000</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2026 AIM² TechWorks Training Centre. All rights reserved.</p>
+                <p>Ndhiwa – Nyeri, Kenya</p>
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>

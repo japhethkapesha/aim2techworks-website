@@ -796,15 +796,16 @@
                         <h4>Email</h4>
                         <p><a href="mailto:aim2techworks@hotmail.com" style="color: var(--accent-cyan);">aim2techworks@hotmail.com</a></p>
                     </div>
-
                     <div class="info-item">
-                        <div class="icon">📱</div>
-                        <h4>Phone</h4>
-                        <p>Main: +254 768 620 804</p>
-                        <p>Admissions: +254 768 620 804</p>
-                        <p>WhatsApp: +254 768 620 804</p>
+                    <div class="icon">📱</div>
+                    <h4>Phone & WhatsApp</h4>
+                    <p>Main: <a href="tel:+254768620804" style="color: var(--accent-cyan);">+254 768 620 804</a></p>
+                    <p><a href="https://wa.me/254768620804?text=Hello, I'm interested in AIM² TechWorks" 
+                          target="_blank" 
+                          style="color: #25D366; font-weight: bold;">
+                        💬 Chat on WhatsApp
+                    </a></p>
                     </div>
-
                     <div class="info-item">
                         <div class="icon">🕐</div>
                         <h4>Office Hours</h4>
@@ -816,7 +817,9 @@
 
                 <div class="contact-form">
                     <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Send Us a Message</h3>
-                    <form action="#" method="post">
+                    <form action="https://formspree.io/f/mbdkyjkn" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - AIM² TechWorks">
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/contact.html?success=true">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -851,11 +854,21 @@
 
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
+                    <div id="form-status" style="margin-top: 1rem; text-align: center;"></div>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+    // Show success message if redirected back
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+    document.getElementById('form-status').innerHTML = 
+        '<p style="color: green; font-weight: bold;">✓ Message sent successfully! We\'ll get back to you soon.</p>';
+    }
+    </script>
+    
     <section class="map-section">
         <div class="container">
             <div class="section-header">

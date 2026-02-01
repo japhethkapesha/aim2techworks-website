@@ -20,13 +20,15 @@
         .payment-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0; }
         .payment-card { background: var(--gray-100); padding: 1.5rem; border-radius: 12px; }
         .payment-card h4 { color: var(--primary-blue); margin-bottom: 1rem; }
+        .form-container { background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin: 2rem 0; }
+        .form-container iframe { border: none; width: 100%; min-height: 1200px; }
     </style>
 </head>
 <body>
     <header class="main-header">
         <div class="header-container">
             <div class="logo-section">
-                <div class="logo-placeholder"><div class="logo-icon">AIM²</div></div>
+                <div class="logo-placeholder"><div class="logo-icon"></div></div>
                 <div class="logo-text">
                     <h1>AIM² TechWorks</h1>
                     <p class="tagline">Where Automation, Motion & Intelligence Meet</p>
@@ -90,16 +92,8 @@
                 <div class="reg-card">
                     <div class="reg-icon">📝</div>
                     <h3>Online Form</h3>
-                    <p>Fill out our comprehensive registration form online (Coming Soon)</p>
-                    <iframe src="https://docs.google.com/forms/d/1_EIGCBIs_QyRJ5CV2U0aWMaPQkB45561t6CctLCPYdY/edit" 
-                            width="100%" 
-                            height="900" 
-                            frameborder="0" 
-                            marginheight="0" 
-                            marginwidth="0">
-                        Loading…
-                    </iframe>                   
-                    <!-- a href="#" class="btn btn-secondary" onclick="alert('Online form coming soon! Please use email registration for now.'); return false;">Register Online</a-->
+                    <p>Fill out our comprehensive registration form online</p>
+                    <a href="#registration-form" class="btn btn-primary" onclick="document.getElementById('registration-form').scrollIntoView({behavior: 'smooth'});">Register Online</a>
                     <div style="margin-top: 1.5rem; text-align: left; font-size: 0.9rem; color: var(--gray-700);">
                         <p><strong>Benefits:</strong></p>
                         <ul style="padding-left: 1.5rem;">
@@ -121,6 +115,24 @@
                     <li><strong>All documents must be genuine</strong> - false documents will result in immediate disqualification</li>
                     <li><strong>You will receive confirmation</strong> within 3-5 working days after registration</li>
                 </ul>
+            </div>
+
+            <!-- Online Registration Form -->
+            <div id="registration-form" class="section-header" style="margin-top: 4rem;">
+                <h2>📝 Online Registration Form</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Complete the form below to register</p>
+            </div>
+
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_EIGCBIs_QyRJ5CV2U0aWMaPQkB45561t6CctLCPYdY/viewform?embedded=true" 
+                        width="100%" 
+                        height="1200" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    Loading…
+                </iframe>
             </div>
 
             <div class="section-header" style="margin-top: 4rem;">
@@ -203,6 +215,7 @@
                     <h4>Contact</h4>
                     <p>📍 Ndhiwa and Nyeri, Kenya</p>
                     <p>📧 <a href="mailto:aim2techworks@hotmail.com">aim2techworks@hotmail.com</a></p>
+                    <p>📱 +254 768 620 804</p>
                 </div>
                 <div class="footer-section">
                     <h4>Training Intakes</h4>
